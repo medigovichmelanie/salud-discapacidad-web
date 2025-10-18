@@ -11,22 +11,34 @@ const Header = () => {
               <Scale className="h-6 w-6 text-primary-foreground" />
             </div>
             <div>
-              <h1 className="text-xl font-bold text-foreground">Lex Salud</h1>
+              <h1 className="text-xl font-bold text-foreground">Discapacidad MDQ</h1>
               <p className="text-xs text-muted-foreground">Abogados Especialistas</p>
             </div>
           </div>
-          
+
           <nav className="hidden md:flex items-center gap-8 ml-auto">
-            <a href="#servicios" className="text-sm font-medium text-muted-foreground hover:text-foreground transition-[var(--transition-smooth)]">
+            <a
+              href="#servicios"
+              className="text-sm font-medium text-muted-foreground hover:text-foreground transition-[var(--transition-smooth)]"
+            >
               Servicios
             </a>
-            <a href="#nosotros" className="text-sm font-medium text-muted-foreground hover:text-foreground transition-[var(--transition-smooth)]">
+            <a
+              href="#nosotros"
+              className="text-sm font-medium text-muted-foreground hover:text-foreground transition-[var(--transition-smooth)]"
+            >
               Nosotros
             </a>
-            <a href="#como-actuar" className="text-sm font-medium text-muted-foreground hover:text-foreground transition-[var(--transition-smooth)]">
+            <a
+              href="#como-actuar"
+              className="text-sm font-medium text-muted-foreground hover:text-foreground transition-[var(--transition-smooth)]"
+            >
               Cómo actuar
             </a>
-            <a href="#contacto" className="text-sm font-medium text-muted-foreground hover:text-foreground transition-[var(--transition-smooth)]">
+            <a
+              href="#contacto"
+              className="text-sm font-medium text-muted-foreground hover:text-foreground transition-[var(--transition-smooth)]"
+            >
               Contacto
             </a>
           </nav>
