@@ -87,10 +87,6 @@ const Contact = () => {
       
       <div className="container px-4 mx-auto max-w-5xl relative z-10">
         <div className="mb-16 text-center max-w-3xl mx-auto">
-          <div className="inline-flex items-center gap-2 bg-primary/10 text-primary px-6 py-2 rounded-full mb-6">
-            <MessageSquare className="w-4 h-4" />
-            <span className="text-sm font-semibold tracking-wider uppercase">Consulta Rápida</span>
-          </div>
           <h2 className="text-4xl md:text-5xl font-bold mb-4 text-foreground">
             Tu caso
           </h2>
