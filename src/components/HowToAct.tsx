@@ -88,24 +88,24 @@ const HowToAct = () => {
             <div className="absolute bottom-0 left-0 w-48 h-48 bg-gradient-to-tr from-secondary/10 to-primary/10 rounded-full blur-3xl -z-0"></div>
             
             <div className="relative z-10">
-              <div className="flex items-start gap-4 mb-6">
-                <div className="w-16 h-16 rounded-2xl bg-gradient-to-br from-primary to-secondary flex items-center justify-center flex-shrink-0 shadow-lg">
-                  <Shield className="h-8 w-8 text-primary-foreground" />
+              <div className="flex flex-col sm:flex-row items-start gap-4 mb-6">
+                <div className="w-14 h-14 sm:w-16 sm:h-16 rounded-2xl bg-gradient-to-br from-primary to-secondary flex items-center justify-center flex-shrink-0 shadow-lg">
+                  <Shield className="h-7 w-7 sm:h-8 sm:w-8 text-primary-foreground" />
                 </div>
-                <h3 className="text-3xl md:text-4xl font-bold text-primary mt-2">
+                <h3 className="text-2xl sm:text-3xl md:text-4xl font-bold text-primary sm:mt-2">
                   ¿Qué es el recurso de amparo en salud?
                 </h3>
               </div>
               
-              <div className="space-y-6 ml-20">
-                <div className="bg-card/80 backdrop-blur-sm border border-border rounded-xl p-6 shadow-sm">
-                  <p className="text-foreground text-lg leading-relaxed">
+              <div className="space-y-4 sm:space-y-6 sm:ml-20">
+                <div className="bg-card/80 backdrop-blur-sm border border-border rounded-xl p-4 sm:p-6 shadow-sm">
+                  <p className="text-foreground text-base sm:text-lg leading-relaxed">
                     El recurso de amparo se utiliza cuando se afecta o niega el ejercicio de un derecho, por ejemplo la cobertura de un tratamiento, medicación, internación o traslado. Es una vía judicial <strong className="text-primary font-semibold">rápida y efectiva</strong>: ante urgencia puede dictarse una medida cautelar en pocas horas; luego el proceso continúa hasta la resolución definitiva.
                   </p>
                 </div>
                 
-                <div className="bg-card/80 backdrop-blur-sm border border-primary/20 rounded-xl p-6 shadow-sm border-l-4 border-l-primary">
-                  <p className="text-muted-foreground text-lg leading-relaxed italic">
+                <div className="bg-card/80 backdrop-blur-sm border border-primary/20 rounded-xl p-4 sm:p-6 shadow-sm border-l-4 border-l-primary">
+                  <p className="text-muted-foreground text-base sm:text-lg leading-relaxed italic">
                     Los plazos varían según el caso y el expediente. Si hay apelaciones, interviene el tribunal de alzada.
                   </p>
                 </div>
