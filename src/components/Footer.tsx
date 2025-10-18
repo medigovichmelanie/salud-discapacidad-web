@@ -52,7 +52,7 @@ const Footer = () => {
               </li>
               <li>
                 <a href="#nosotros" className="hover:text-primary transition-colors">
-                  Sobre Nosotros
+                  Nosotros
                 </a>
               </li>
               <li>
