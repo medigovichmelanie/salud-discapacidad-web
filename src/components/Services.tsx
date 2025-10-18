@@ -133,7 +133,7 @@ const Services = () => {
           </p>
         </div>
         
-        <div className="max-w-5xl mx-auto">
+        <div className="relative max-w-6xl mx-auto px-12">
           <Carousel
             opts={{
               align: "start",
@@ -141,17 +141,15 @@ const Services = () => {
             }}
             className="w-full"
           >
-            <CarouselContent>
+            <CarouselContent className="-ml-4">
               {services.map((service, index) => (
-                <CarouselItem key={index} className="md:basis-1/2 lg:basis-1/3">
-                  <div className="p-1 h-full">
-                    <ServiceCard service={service} />
-                  </div>
+                <CarouselItem key={index} className="pl-4 basis-full md:basis-1/2 lg:basis-1/3">
+                  <ServiceCard service={service} />
                 </CarouselItem>
               ))}
             </CarouselContent>
-            <CarouselPrevious className="hidden md:flex" />
-            <CarouselNext className="hidden md:flex" />
+            <CarouselPrevious className="-left-12" />
+            <CarouselNext className="-right-12" />
           </Carousel>
         </div>
       </div>
