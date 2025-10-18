@@ -26,7 +26,7 @@ const Hero = () => {
             Especialistas en
             <span className="bg-gradient-to-r from-primary via-secondary to-primary bg-clip-text text-transparent">
               {" "}
-              Derecho de Salud{" "}
+              Derecho a la Salud{" "}
             </span>
             Mar del Plata
           </h1>
