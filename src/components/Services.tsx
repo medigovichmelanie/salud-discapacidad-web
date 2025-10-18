@@ -1,7 +1,7 @@
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Dialog, DialogContent, DialogDescription, DialogHeader, DialogTitle, DialogTrigger } from "@/components/ui/dialog";
-import { Building2, Users, Stethoscope, Pill, FileHeart, ShieldCheck, Activity } from "lucide-react";
+import { Building2, Users, Stethoscope, Pill, FileHeart, ShieldCheck, Activity, Globe } from "lucide-react";
 
 const services = [
   {
@@ -72,6 +72,19 @@ const services = [
       "Bariátrica: cobertura integral si se cumplen criterios (pre/pos operatorio y seguimiento).",
       "Oncológicos: gestión de estudios, tratamientos y medicación.",
       "Fertilidad: acceso a técnicas y fármacos según normativa.",
+    ],
+  },
+  {
+    icon: Globe,
+    title: "Extranjería e Inmigración",
+    shortDescription: "Estamos especializados en extranjería, nacionalidad, derecho laboral, seguridad social y movilidad internacional, y cuenta con la experiencia necesaria para guiarte en cada etapa del proceso.",
+    fullDescription: [
+      "Nuestros servicios abarcan:",
+      "Visados y permisos de residencia: Obtención, renovación y modificaciones. Residencia y trabajo por cuenta ajena, cuenta propia y supuestos especiales.",
+      "Arraigo y regularizaciones: Laboral, social y familiar.",
+      "Nacionalidad española: Solicitud, preparación de documentación y presentación de recursos.",
+      "Reagrupación familiar: Acompañamiento en la reunificación con cónyuge, hijos u otros familiares.",
+      "Estancia por estudios y movilidad internacional: Autorizaciones para estudiantes y prácticas. Tarjeta Azul-UE y traslados intraempresariales.",
     ],
   },
 ];
