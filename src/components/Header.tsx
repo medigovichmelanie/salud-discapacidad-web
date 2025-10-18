@@ -16,21 +16,20 @@ const Header = () => {
             </div>
           </div>
           
-          <nav className="hidden md:flex items-center gap-8">
+          <nav className="hidden md:flex items-center gap-8 ml-auto">
             <a href="#servicios" className="text-sm font-medium text-muted-foreground hover:text-foreground transition-[var(--transition-smooth)]">
               Servicios
             </a>
             <a href="#nosotros" className="text-sm font-medium text-muted-foreground hover:text-foreground transition-[var(--transition-smooth)]">
               Nosotros
             </a>
+            <a href="#como-actuar" className="text-sm font-medium text-muted-foreground hover:text-foreground transition-[var(--transition-smooth)]">
+              Cómo actuar
+            </a>
             <a href="#contacto" className="text-sm font-medium text-muted-foreground hover:text-foreground transition-[var(--transition-smooth)]">
               Contacto
             </a>
           </nav>
-          
-          <Button variant="hero" size="lg">
-            Consulta Gratuita
-          </Button>
         </div>
       </div>
     </header>

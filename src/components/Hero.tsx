@@ -19,7 +19,7 @@ const Hero = () => {
       <div className="container mx-auto px-4 relative z-10">
         <div className="max-w-2xl">
           <div className="inline-block mb-4 px-4 py-2 bg-secondary/10 border border-secondary/20 rounded-full">
-            <span className="text-secondary font-semibold text-sm">Más de 15 años de experiencia</span>
+            <span className="text-secondary font-semibold text-sm">Más de 25 años de experiencia</span>
           </div>
           
           <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold mb-6 text-foreground leading-tight">
@@ -53,7 +53,7 @@ const Hero = () => {
               <div className="text-sm text-muted-foreground">Éxito</div>
             </div>
             <div>
-              <div className="text-3xl font-bold text-accent mb-1">15+</div>
+              <div className="text-3xl font-bold text-accent mb-1">25+</div>
               <div className="text-sm text-muted-foreground">Años</div>
             </div>
           </div>
