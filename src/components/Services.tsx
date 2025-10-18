@@ -83,20 +83,20 @@ const ServiceCard = ({ service }: { service: typeof services[0] }) => {
   const Icon = service.icon;
 
   return (
-    <Card className="border-border bg-card shadow-[var(--shadow-card)] h-full flex flex-col">
-      <CardHeader>
+    <Card className="border-border bg-card shadow-[var(--shadow-card)] h-[480px] flex flex-col">
+      <CardHeader className="flex-shrink-0">
         <div className="w-14 h-14 rounded-xl bg-gradient-to-br from-primary to-secondary flex items-center justify-center mb-4">
           <Icon className="h-7 w-7 text-primary-foreground" />
         </div>
         <CardTitle className="text-xl text-foreground">{service.title}</CardTitle>
       </CardHeader>
-      <CardContent className="flex-1 flex flex-col">
-        <CardDescription className="text-muted-foreground text-base leading-relaxed mb-4">
+      <CardContent className="flex-1 flex flex-col overflow-hidden">
+        <CardDescription className="text-muted-foreground text-base leading-relaxed mb-4 flex-shrink-0">
           {service.shortDescription}
         </CardDescription>
         
-        <Collapsible open={isOpen} onOpenChange={setIsOpen} className="mt-auto">
-          <CollapsibleContent className="space-y-3 mb-4">
+        <Collapsible open={isOpen} onOpenChange={setIsOpen} className="flex-1 flex flex-col min-h-0">
+          <CollapsibleContent className="flex-1 overflow-y-auto mb-4 space-y-3">
             {service.fullDescription.map((paragraph, idx) => (
               <p key={idx} className="text-sm text-muted-foreground leading-relaxed">
                 {paragraph}
@@ -104,7 +104,7 @@ const ServiceCard = ({ service }: { service: typeof services[0] }) => {
             ))}
           </CollapsibleContent>
           
-          <CollapsibleTrigger asChild>
+          <CollapsibleTrigger asChild className="flex-shrink-0">
             <Button 
               variant="outline" 
               size="sm" 
