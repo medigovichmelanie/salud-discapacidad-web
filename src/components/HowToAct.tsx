@@ -15,7 +15,7 @@ const HowToAct = () => {
       title: "Vía administrativa",
       description: "Se presenta el reclamo formal. Si hay negativa o arbitrariedad, se habilita la instancia judicial para exigir el cumplimiento de tus derechos.",
       icon: Building2,
-      color: "from-purple-500 to-pink-500"
+      color: "from-amber-500 to-orange-500"
     },
     {
       number: "3",
