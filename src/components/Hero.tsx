@@ -59,7 +59,7 @@ const Hero = () => {
                 rel="noopener noreferrer"
               >
                 <MessageCircle className="mr-2" />
-                Escríbenos
+                WhatsApp
               </a>
             </Button>
           </div>
