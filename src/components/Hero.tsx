@@ -42,19 +42,16 @@ const Hero = () => {
           </p>
 
           <div className="flex flex-col sm:flex-row gap-4">
-            <Button variant="hero" size="lg" className="text-base" asChild>
-              <a
-                href="https://api.whatsapp.com/send?phone=5492234421528&text=Hola! Quisiera contarles mi caso."
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                Cuéntanos tu caso
-                <ArrowRight className="ml-2" />
-              </a>
+            {/* Botón sin acción */}
+            <Button variant="hero" size="lg" className="text-base cursor-default">
+              Cuéntanos tu caso
+              <ArrowRight className="ml-2" />
             </Button>
+
+            {/* Botón de WhatsApp */}
             <Button variant="hero-outline" size="lg" className="text-base" asChild>
               <a
-                href="https://api.whatsapp.com/send?phone=5492234421528&text=Hola! Quisiera más información."
+                href="https://wa.me/5492234421528?text=Hola! Quisiera más información."
                 target="_blank"
                 rel="noopener noreferrer"
               >
