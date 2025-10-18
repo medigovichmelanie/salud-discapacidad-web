@@ -32,8 +32,8 @@ const Hero = () => {
           </h1>
 
           <p className="text-xl text-muted-foreground mb-8 leading-relaxed">
-            Defendemos tus derechos con dedicación y profesionalismo. Asesoría especializada en incapacidades, pensiones
-            y acceso a tratamientos médicos.
+            Defendemos tus derechos con dedicación y profesionalismo. Abogados especializados en incapacidades,
+            pensiones y acceso a tratamientos médicos.
           </p>
 
           <div className="flex flex-col sm:flex-row gap-4">
