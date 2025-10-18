@@ -28,7 +28,7 @@ const Hero = () => {
               {" "}
               Derecho de Salud{" "}
             </span>
-            y Discapacidad
+            Mar del Plata
           </h1>
 
           <p className="text-xl text-muted-foreground mb-8 leading-relaxed">
