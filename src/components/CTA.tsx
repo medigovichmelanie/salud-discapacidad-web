@@ -26,14 +26,21 @@ const CTA = () => {
               Agendar Consulta
               <ArrowRight className="ml-2" />
             </Button>
-            <Button 
-              variant="hero-outline" 
-              size="lg" 
-              className="text-base border-primary-foreground/30 text-primary-foreground hover:bg-primary-foreground hover:text-primary"
+          <Button 
+            variant="hero-outline" 
+            size="lg" 
+            className="text-base border-primary-foreground/30 text-primary-foreground hover:bg-primary-foreground hover:text-primary"
+            asChild
+          >
+            <a
+              href="https://api.whatsapp.com/send?phone=5492234421528&text=Hola! Quisiera más información."
+              target="_blank"
+              rel="noopener noreferrer"
             >
               <MessageCircle className="mr-2" />
               WhatsApp
-            </Button>
+            </a>
+          </Button>
           </div>
           
           <p className="mt-8 text-primary-foreground/80 text-sm">
