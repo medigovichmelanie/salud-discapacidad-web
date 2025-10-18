@@ -13,11 +13,8 @@ const Features = () => {
     <section id="nosotros" className="py-24 bg-muted/30">
       <div className="container mx-auto px-4">
         <div className="text-center max-w-3xl mx-auto mb-16">
-          <div className="inline-block mb-4 px-4 py-2 bg-primary/10 border border-primary/20 rounded-full">
-            <span className="text-primary font-semibold text-sm uppercase tracking-wider">Nuestro Estudio</span>
-          </div>
-          <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-6">
-            Quiénes somos
+          <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-4">
+            Nosotros
           </h2>
           <p className="text-lg text-muted-foreground">
             Abogados especializados en derecho a la salud y en la protección de los derechos de las personas con discapacidad en Mar del Plata.
