@@ -124,9 +124,9 @@ const ServiceCard = ({ service }: { service: typeof services[0] }) => {
 
 const Services = () => {
   return (
-    <section id="servicios" className="py-24 bg-muted/30">
+    <section id="servicios" className="py-16 bg-muted/30">
       <div className="container mx-auto px-4">
-        <div className="text-center max-w-3xl mx-auto mb-16">
+        <div className="text-center max-w-3xl mx-auto mb-12">
           <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-4">
             Nuestros Servicios
           </h2>
@@ -135,7 +135,7 @@ const Services = () => {
           </p>
         </div>
         
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-7xl mx-auto">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 max-w-5xl mx-auto">
           {services.map((service, index) => (
             <ServiceCard key={index} service={service} />
           ))}
