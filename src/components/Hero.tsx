@@ -1,8 +1,13 @@
 import { Button } from "@/components/ui/button";
-import { ArrowRight, Phone } from "lucide-react";
+import { ArrowRight, MessageCircle } from "lucide-react";
 import heroImage from "@/assets/hero-legal.jpg";
+import { useCountUp } from "@/hooks/use-count-up";
 
 const Hero = () => {
+  const casosGanados = useCountUp(500, 2500);
+  const exitoRate = useCountUp(98, 2500);
+  const years = useCountUp(25, 2500);
+
   return (
     <section className="relative min-h-screen flex items-center pt-20">
       {/* Background Image with Overlay */}
@@ -37,27 +42,39 @@ const Hero = () => {
           </p>
 
           <div className="flex flex-col sm:flex-row gap-4">
-            <Button variant="hero" size="lg" className="text-base">
-              Agenda tu Consulta
-              <ArrowRight className="ml-2" />
+            <Button variant="hero" size="lg" className="text-base" asChild>
+              <a
+                href="https://api.whatsapp.com/send?phone=5492234421528&text=Hola! Quisiera contarles mi caso."
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Cuéntanos tu caso
+                <ArrowRight className="ml-2" />
+              </a>
             </Button>
-            <Button variant="hero-outline" size="lg" className="text-base">
-              <Phone className="mr-2" />
-              Llamar Ahora
+            <Button variant="hero-outline" size="lg" className="text-base" asChild>
+              <a
+                href="https://api.whatsapp.com/send?phone=5492234421528&text=Hola! Quisiera más información."
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <MessageCircle className="mr-2" />
+                Escríbenos
+              </a>
             </Button>
           </div>
 
           <div className="mt-12 grid grid-cols-3 gap-8 max-w-lg">
             <div>
-              <div className="text-3xl font-bold text-primary mb-1">500+</div>
+              <div className="text-3xl font-bold text-primary mb-1">{casosGanados}+</div>
               <div className="text-sm text-muted-foreground">Casos Ganados</div>
             </div>
             <div>
-              <div className="text-3xl font-bold text-secondary mb-1">98%</div>
+              <div className="text-3xl font-bold text-secondary mb-1">{exitoRate}%</div>
               <div className="text-sm text-muted-foreground">Éxito</div>
             </div>
             <div>
-              <div className="text-3xl font-bold text-accent mb-1">25+</div>
+              <div className="text-3xl font-bold text-accent mb-1">{years}+</div>
               <div className="text-sm text-muted-foreground">Años</div>
             </div>
           </div>
