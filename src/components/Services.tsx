@@ -1,9 +1,7 @@
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
-import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from "@/components/ui/carousel";
-import { Collapsible, CollapsibleContent, CollapsibleTrigger } from "@/components/ui/collapsible";
-import { Building2, Users, Stethoscope, Pill, FileHeart, ShieldCheck, Activity, ChevronDown } from "lucide-react";
-import { useState } from "react";
+import { Dialog, DialogContent, DialogDescription, DialogHeader, DialogTitle, DialogTrigger } from "@/components/ui/dialog";
+import { Building2, Users, Stethoscope, Pill, FileHeart, ShieldCheck, Activity } from "lucide-react";
 
 const services = [
   {
@@ -79,42 +77,46 @@ const services = [
 ];
 
 const ServiceCard = ({ service }: { service: typeof services[0] }) => {
-  const [isOpen, setIsOpen] = useState(false);
   const Icon = service.icon;
 
   return (
-    <Card className="border-border bg-card shadow-[var(--shadow-card)] h-[480px] flex flex-col">
-      <CardHeader className="flex-shrink-0">
+    <Card className="border-border bg-card shadow-[var(--shadow-card)] h-full flex flex-col hover:shadow-[var(--shadow-elegant)] transition-shadow duration-300">
+      <CardHeader>
         <div className="w-14 h-14 rounded-xl bg-gradient-to-br from-primary to-secondary flex items-center justify-center mb-4">
           <Icon className="h-7 w-7 text-primary-foreground" />
         </div>
         <CardTitle className="text-xl text-foreground">{service.title}</CardTitle>
       </CardHeader>
-      <CardContent className="flex-1 flex flex-col overflow-hidden">
-        <CardDescription className="text-muted-foreground text-base leading-relaxed mb-4 flex-shrink-0">
+      <CardContent className="flex-1 flex flex-col">
+        <CardDescription className="text-muted-foreground text-base leading-relaxed mb-6 flex-1">
           {service.shortDescription}
         </CardDescription>
         
-        <Collapsible open={isOpen} onOpenChange={setIsOpen} className="flex-1 flex flex-col min-h-0">
-          <CollapsibleContent className="flex-1 overflow-y-auto mb-4 space-y-3">
-            {service.fullDescription.map((paragraph, idx) => (
-              <p key={idx} className="text-sm text-muted-foreground leading-relaxed">
-                {paragraph}
-              </p>
-            ))}
-          </CollapsibleContent>
-          
-          <CollapsibleTrigger asChild className="flex-shrink-0">
-            <Button 
-              variant="outline" 
-              size="sm" 
-              className="w-full group"
-            >
-              {isOpen ? "Leer menos" : "Leer más"}
-              <ChevronDown className={`ml-2 h-4 w-4 transition-transform duration-300 ${isOpen ? "rotate-180" : ""}`} />
+        <Dialog>
+          <DialogTrigger asChild>
+            <Button variant="outline" className="w-full">
+              Leer más
             </Button>
-          </CollapsibleTrigger>
-        </Collapsible>
+          </DialogTrigger>
+          <DialogContent className="max-w-2xl max-h-[80vh] overflow-y-auto">
+            <DialogHeader>
+              <div className="w-16 h-16 rounded-xl bg-gradient-to-br from-primary to-secondary flex items-center justify-center mb-4">
+                <Icon className="h-8 w-8 text-primary-foreground" />
+              </div>
+              <DialogTitle className="text-2xl">{service.title}</DialogTitle>
+              <DialogDescription className="text-base text-muted-foreground pt-2">
+                {service.shortDescription}
+              </DialogDescription>
+            </DialogHeader>
+            <div className="space-y-4 pt-4">
+              {service.fullDescription.map((paragraph, idx) => (
+                <p key={idx} className="text-foreground leading-relaxed">
+                  {paragraph}
+                </p>
+              ))}
+            </div>
+          </DialogContent>
+        </Dialog>
       </CardContent>
     </Card>
   );
@@ -133,24 +135,10 @@ const Services = () => {
           </p>
         </div>
         
-        <div className="relative max-w-6xl mx-auto px-12">
-          <Carousel
-            opts={{
-              align: "start",
-              loop: true,
-            }}
-            className="w-full"
-          >
-            <CarouselContent className="-ml-4">
-              {services.map((service, index) => (
-                <CarouselItem key={index} className="pl-4 basis-full md:basis-1/2 lg:basis-1/3">
-                  <ServiceCard service={service} />
-                </CarouselItem>
-              ))}
-            </CarouselContent>
-            <CarouselPrevious className="-left-12" />
-            <CarouselNext className="-right-12" />
-          </Carousel>
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-7xl mx-auto">
+          {services.map((service, index) => (
+            <ServiceCard key={index} service={service} />
+          ))}
         </div>
       </div>
     </section>
