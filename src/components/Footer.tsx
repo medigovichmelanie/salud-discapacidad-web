@@ -75,7 +75,7 @@ const Footer = () => {
         </div>
 
         <div className="border-t border-border pt-6 text-center text-sm text-muted-foreground">
-          <p>© {new Date().getFullYear()} Lex Salud. Todos los derechos reservados.</p>
+          <p>© {new Date().getFullYear()} Discapacidad MDQ. Todos los derechos reservados.</p>
         </div>
       </div>
     </footer>
