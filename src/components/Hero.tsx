@@ -37,8 +37,8 @@ const Hero = () => {
           </h1>
 
           <p className="text-xl text-muted-foreground mb-8 leading-relaxed">
-            Defendemos tus derechos con dedicación y profesionalismo. Abogados especializados en incapacidades,
-            pensiones y acceso a tratamientos médicos.
+            Defendemos tu derecho a la salud y a una vida digna. Más de 25 años acompañando a personas en Mar del Plata
+            para garantizar coberturas médicas, pensiones y prestaciones por discapacidad.
           </p>
 
           <div className="flex flex-col sm:flex-row gap-4">
