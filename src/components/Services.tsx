@@ -1,6 +1,13 @@
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
-import { Dialog, DialogContent, DialogDescription, DialogHeader, DialogTitle, DialogTrigger } from "@/components/ui/dialog";
+import {
+  Dialog,
+  DialogContent,
+  DialogDescription,
+  DialogHeader,
+  DialogTitle,
+  DialogTrigger,
+} from "@/components/ui/dialog";
 import { Building2, Users, Stethoscope, Pill, FileHeart, ShieldCheck, Activity, Globe } from "lucide-react";
 
 const services = [
@@ -77,7 +84,8 @@ const services = [
   {
     icon: Globe,
     title: "Extranjería e Inmigración",
-    shortDescription: "Estamos especializados en extranjería, nacionalidad, derecho laboral, seguridad social y movilidad internacional, y cuenta con la experiencia necesaria para guiarte en cada etapa del proceso.",
+    shortDescription:
+      "Estamos especializados en extranjería, nacionalidad, derecho laboral, seguridad social y movilidad internacional, y cuenta con la experiencia necesaria para guiarte en cada etapa del proceso.",
     fullDescription: [
       "Nuestros servicios abarcan:",
       "Visados y permisos de residencia: Obtención, renovación y modificaciones. Residencia y trabajo por cuenta ajena, cuenta propia y supuestos especiales.",
@@ -89,7 +97,7 @@ const services = [
   },
 ];
 
-const ServiceCard = ({ service }: { service: typeof services[0] }) => {
+const ServiceCard = ({ service }: { service: (typeof services)[0] }) => {
   const Icon = service.icon;
 
   return (
@@ -104,7 +112,7 @@ const ServiceCard = ({ service }: { service: typeof services[0] }) => {
         <CardDescription className="text-muted-foreground text-base leading-relaxed mb-6 flex-1">
           {service.shortDescription}
         </CardDescription>
-        
+
         <Dialog>
           <DialogTrigger asChild>
             <Button variant="outline" className="w-full">
@@ -140,14 +148,12 @@ const Services = () => {
     <section id="servicios" className="py-16 bg-muted/30">
       <div className="container mx-auto px-4">
         <div className="text-center max-w-3xl mx-auto mb-12">
-          <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-4">
-            Nuestros Servicios
-          </h2>
+          <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-4">Nuestros Servicios</h2>
           <p className="text-lg text-muted-foreground">
-            Especialistas en derecho sanitario con un enfoque humano y resultados probados
+            Asesoramiento legal integral en derecho a la salud y cobertura médica en Mar del Plata
           </p>
         </div>
-        
+
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 max-w-5xl mx-auto">
           {services.map((service, index) => (
             <ServiceCard key={index} service={service} />
