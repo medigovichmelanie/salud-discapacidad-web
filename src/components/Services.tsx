@@ -150,7 +150,7 @@ const Services = () => {
         <div className="text-center max-w-3xl mx-auto mb-12">
           <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-4">Nuestros Servicios</h2>
           <p className="text-lg text-muted-foreground">
-            Asesoramiento legal integral en derecho a la salud y cobertura médica en Mar del Plata
+            Asesoramiento legal integral en derecho a la salud y cobertura médica en Mar del Plata.
           </p>
         </div>
 
