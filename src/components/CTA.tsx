@@ -15,9 +15,7 @@ const CTA = () => {
         <div className="max-w-3xl mx-auto text-center">
           <h2 className="text-4xl md:text-5xl font-bold text-primary-foreground mb-6">Comienza tu Consulta Hoy</h2>
           <p className="text-xl text-primary-foreground/90 mb-8 leading-relaxed">
-            No esperes más para hacer valer tus derechos. Nuestro equipo jurídico analiza tu situación y te orienta
-            sobre los pasos a seguir para acceder a tus coberturas médicas, tratamientos o prestaciones por
-            discapacidad.
+            No dejes que el tiempo juegue en tu contra. Evaluamos tu caso y te ofrecemos las mejores opciones legales.
           </p>
 
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
