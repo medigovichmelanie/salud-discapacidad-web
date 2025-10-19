@@ -44,7 +44,7 @@ const Hero = () => {
           <div className="flex flex-col sm:flex-row gap-4">
             {/* Botón sin acción */}
             <Button variant="hero" size="lg" className="text-base cursor-default">
-              Cuéntanos tu caso
+              Asesoramiento ahora
               <ArrowRight className="ml-2" />
             </Button>
 
