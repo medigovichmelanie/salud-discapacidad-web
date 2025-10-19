@@ -17,8 +17,8 @@ const Footer = () => {
               </div>
             </div>
             <p className="text-muted-foreground text-sm leading-relaxed max-w-md">
-              Despacho especializado en derecho a la salud y de la discapacidad. Más de 25 años defendiendo los derechos
-              de nuestros clientes con profesionalismo y dedicación.
+              Despacho especializado en derecho a la salud y de la discapacidad en Mar del Plata. Más de 25 años
+              defendiendo los derechos de nuestros clientes con profesionalismo y dedicación.
             </p>
           </div>
 
