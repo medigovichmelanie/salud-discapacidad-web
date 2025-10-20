@@ -1,14 +1,5 @@
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
-import { Button } from "@/components/ui/button";
-import {
-  Dialog,
-  DialogContent,
-  DialogDescription,
-  DialogHeader,
-  DialogTitle,
-  DialogTrigger,
-} from "@/components/ui/dialog";
-import { Building2, Users, Stethoscope, Pill, FileHeart, ShieldCheck, Activity, Globe } from "lucide-react";
+import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
+import { Building2, Users, Stethoscope, Pill, FileHeart, ShieldCheck, Activity, Globe, ChevronRight } from "lucide-react";
 
 const services = [
   {
@@ -97,49 +88,36 @@ const services = [
   },
 ];
 
-const ServiceCard = ({ service }: { service: (typeof services)[0] }) => {
+const ServiceItem = ({ service, value }: { service: (typeof services)[0]; value: string }) => {
   const Icon = service.icon;
 
   return (
-    <Card className="border-border bg-card shadow-[var(--shadow-card)] h-full flex flex-col hover:shadow-[var(--shadow-elegant)] transition-shadow duration-300">
-      <CardHeader>
-        <div className="w-14 h-14 rounded-xl bg-gradient-to-br from-primary to-secondary flex items-center justify-center mb-4">
-          <Icon className="h-7 w-7 text-primary-foreground" />
+    <AccordionItem 
+      value={value} 
+      className="border border-border rounded-xl mb-4 overflow-hidden bg-card shadow-[var(--shadow-card)] hover:shadow-[var(--shadow-elegant)] transition-all duration-300"
+    >
+      <AccordionTrigger className="px-6 py-5 hover:no-underline group [&[data-state=open]]:bg-muted/50">
+        <div className="flex items-center gap-4 w-full">
+          <div className="w-12 h-12 rounded-lg bg-gradient-to-br from-primary to-secondary flex items-center justify-center flex-shrink-0 group-hover:scale-110 transition-transform duration-300">
+            <Icon className="h-6 w-6 text-primary-foreground" />
+          </div>
+          <div className="flex-1 text-left">
+            <h3 className="text-lg font-semibold text-foreground mb-1">{service.title}</h3>
+            <p className="text-sm text-muted-foreground">{service.shortDescription}</p>
+          </div>
         </div>
-        <CardTitle className="text-xl text-foreground">{service.title}</CardTitle>
-      </CardHeader>
-      <CardContent className="flex-1 flex flex-col">
-        <CardDescription className="text-muted-foreground text-base leading-relaxed mb-6 flex-1">
-          {service.shortDescription}
-        </CardDescription>
-
-        <Dialog>
-          <DialogTrigger asChild>
-            <Button variant="outline" className="w-full">
-              Leer más
-            </Button>
-          </DialogTrigger>
-          <DialogContent className="max-w-2xl max-h-[80vh] overflow-y-auto">
-            <DialogHeader>
-              <div className="w-16 h-16 rounded-xl bg-gradient-to-br from-primary to-secondary flex items-center justify-center mb-4">
-                <Icon className="h-8 w-8 text-primary-foreground" />
-              </div>
-              <DialogTitle className="text-2xl">{service.title}</DialogTitle>
-              <DialogDescription className="text-base text-muted-foreground pt-2">
-                {service.shortDescription}
-              </DialogDescription>
-            </DialogHeader>
-            <div className="space-y-4 pt-4">
-              {service.fullDescription.map((paragraph, idx) => (
-                <p key={idx} className="text-foreground leading-relaxed">
-                  {paragraph}
-                </p>
-              ))}
+      </AccordionTrigger>
+      <AccordionContent className="px-6 pb-5">
+        <div className="pl-16 space-y-3 pt-2">
+          {service.fullDescription.map((paragraph, idx) => (
+            <div key={idx} className="flex gap-3 items-start">
+              <ChevronRight className="h-5 w-5 text-primary flex-shrink-0 mt-0.5" />
+              <p className="text-foreground leading-relaxed">{paragraph}</p>
             </div>
-          </DialogContent>
-        </Dialog>
-      </CardContent>
-    </Card>
+          ))}
+        </div>
+      </AccordionContent>
+    </AccordionItem>
   );
 };
 
@@ -154,11 +132,11 @@ const Services = () => {
           </p>
         </div>
 
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 max-w-5xl mx-auto">
+        <Accordion type="single" collapsible className="max-w-4xl mx-auto">
           {services.map((service, index) => (
-            <ServiceCard key={index} service={service} />
+            <ServiceItem key={index} service={service} value={`item-${index}`} />
           ))}
-        </div>
+        </Accordion>
       </div>
     </section>
   );
