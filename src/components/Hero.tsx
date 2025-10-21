@@ -38,7 +38,7 @@ const Hero = () => {
 
           <p className="text-xl text-muted-foreground mb-8 leading-relaxed">
             Defendemos tu derecho a la salud y a una vida digna. Más de 25 años acompañando a personas en Mar del Plata
-            para garantizar coberturas médicas, pensiones y prestaciones por discapacidad.
+            para garantizar coberturas médicas, acceso a tratamientos y prestaciones por discapacidad.
           </p>
 
           <div className="flex flex-col sm:flex-row gap-4">
