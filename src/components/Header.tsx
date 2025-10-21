@@ -1,5 +1,10 @@
 import { Button } from "@/components/ui/button";
-import { Scale } from "lucide-react";
+import { Scale, Menu } from "lucide-react";
+import {
+  Sheet,
+  SheetContent,
+  SheetTrigger,
+} from "@/components/ui/sheet";
 
 const Header = () => {
   return (
@@ -42,6 +47,43 @@ const Header = () => {
               Contacto
             </a>
           </nav>
+
+          {/* Mobile Menu */}
+          <Sheet>
+            <SheetTrigger asChild className="md:hidden ml-auto">
+              <Button variant="ghost" size="icon">
+                <Menu className="h-6 w-6" />
+              </Button>
+            </SheetTrigger>
+            <SheetContent side="right" className="w-[300px]">
+              <nav className="flex flex-col gap-6 mt-8">
+                <a
+                  href="#servicios"
+                  className="text-lg font-medium text-muted-foreground hover:text-foreground transition-[var(--transition-smooth)]"
+                >
+                  Servicios
+                </a>
+                <a
+                  href="#nosotros"
+                  className="text-lg font-medium text-muted-foreground hover:text-foreground transition-[var(--transition-smooth)]"
+                >
+                  Nosotros
+                </a>
+                <a
+                  href="#como-actuar"
+                  className="text-lg font-medium text-muted-foreground hover:text-foreground transition-[var(--transition-smooth)]"
+                >
+                  Cómo actuar
+                </a>
+                <a
+                  href="#contacto"
+                  className="text-lg font-medium text-muted-foreground hover:text-foreground transition-[var(--transition-smooth)]"
+                >
+                  Contacto
+                </a>
+              </nav>
+            </SheetContent>
+          </Sheet>
         </div>
       </div>
     </header>
