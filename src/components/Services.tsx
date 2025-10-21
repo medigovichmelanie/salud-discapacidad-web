@@ -1,5 +1,15 @@
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
-import { Building2, Users, Stethoscope, Pill, FileHeart, ShieldCheck, Activity, Globe, ChevronRight } from "lucide-react";
+import {
+  Building2,
+  Users,
+  Stethoscope,
+  Pill,
+  FileHeart,
+  ShieldCheck,
+  Activity,
+  Globe,
+  ChevronRight,
+} from "lucide-react";
 
 const services = [
   {
@@ -74,7 +84,7 @@ const services = [
   },
   {
     icon: Globe,
-    title: "Extranjería e Inmigración",
+    title: "Extranjería e Inmigración a España",
     shortDescription:
       "Estamos especializados en extranjería, nacionalidad, derecho laboral, seguridad social y movilidad internacional, y cuenta con la experiencia necesaria para guiarte en cada etapa del proceso.",
     fullDescription: [
@@ -92,8 +102,8 @@ const ServiceItem = ({ service, value }: { service: (typeof services)[0]; value:
   const Icon = service.icon;
 
   return (
-    <AccordionItem 
-      value={value} 
+    <AccordionItem
+      value={value}
       className="border border-border rounded-xl mb-4 overflow-hidden bg-card shadow-[var(--shadow-card)] hover:shadow-[var(--shadow-elegant)] transition-all duration-300"
     >
       <AccordionTrigger className="px-6 py-5 hover:no-underline group [&[data-state=open]]:bg-muted/50">
