@@ -7,18 +7,10 @@ import { useToast } from "@/hooks/use-toast";
 import { supabase } from "@/integrations/supabase/client";
 import { Mail, Phone, MessageSquare, Send } from "lucide-react";
 
-type FormData = {
-  name: string;
-  email: string;
-  phone: string;
-  claimType: string;
-  message: string;
-};
-
 const Contact = () => {
   const { toast } = useToast();
   const [isSubmitting, setIsSubmitting] = useState(false);
-  const [formData, setFormData] = useState<FormData>({
+  const [formData, setFormData] = useState({
     name: "",
     email: "",
     phone: "",
@@ -36,19 +28,10 @@ const Contact = () => {
     "Otros",
   ];
 
-  const isEmail = (v: string) => /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(v.trim());
-
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
 
-    // Validaciones mínimas
-    if (
-      !formData.name.trim() ||
-      !formData.email.trim() ||
-      !formData.phone.trim() ||
-      !formData.claimType.trim() ||
-      !formData.message.trim()
-    ) {
+    if (!formData.name || !formData.email || !formData.phone || !formData.claimType || !formData.message) {
       toast({
         title: "Error",
         description: "Por favor completa todos los campos",
@@ -57,41 +40,14 @@ const Contact = () => {
       return;
     }
 
-    if (!isEmail(formData.email)) {
-      toast({
-        title: "Error",
-        description: "Ingresá un email válido.",
-        variant: "destructive",
-      });
-      return;
-    }
-
     setIsSubmitting(true);
 
     try {
-      // Invocamos la Supabase Edge Function
-      const { data, error } = await supabase.functions.invoke("send-contact-email", {
-        body: {
-          name: formData.name.trim(),
-          email: formData.email.trim(),
-          phone: formData.phone.trim(),
-          claimType: formData.claimType.trim(),
-          message: formData.message.trim(),
-        } as FormData,
+      const { error } = await supabase.functions.invoke("send-contact-email", {
+        body: formData,
       });
 
-      if (error) {
-        console.error("Supabase Function error:", error);
-        throw new Error(typeof error === "string" ? error : error.message || "Error desconocido");
-      }
-
-      // Si Resend devolvió error dentro del payload, lo mostramos
-      if (data?.error) {
-        console.error("Resend payload error:", data.error);
-        throw new Error(
-          typeof data.error === "string" ? data.error : data.error.message || "No se pudo enviar el email.",
-        );
-      }
+      if (error) throw error;
 
       toast({
         title: "¡Mensaje enviado!",
@@ -105,11 +61,11 @@ const Contact = () => {
         claimType: "",
         message: "",
       });
-    } catch (err: any) {
-      console.error("Error al enviar mensaje:", err);
+    } catch (error) {
+      console.error("Error:", error);
       toast({
         title: "Error",
-        description: err?.message ?? "Hubo un problema al enviar el mensaje. Por favor intentá de nuevo.",
+        description: "Hubo un problema al enviar el mensaje. Por favor intenta de nuevo.",
         variant: "destructive",
       });
     } finally {
