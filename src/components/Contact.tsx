@@ -4,7 +4,7 @@ import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
 import { useToast } from "@/hooks/use-toast";
-import { supabase } from "@/integrations/supabase/client";
+// import { supabase } from "@/integrations/supabase/client"; // ya no se usa
 import { Mail, Phone, MessageSquare, Send } from "lucide-react";
 
 const Contact = () => {
@@ -43,11 +43,21 @@ const Contact = () => {
     setIsSubmitting(true);
 
     try {
-      const { error } = await supabase.functions.invoke("send-contact-email", {
-        body: formData,
+      const response = await fetch("https://rcaajtfcstrxscbisuqv.supabase.co/functions/v1/send-contact-email", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(formData),
       });
 
-      if (error) throw error;
+      if (!response.ok) {
+        // opcional: leer el error que devuelva la función
+        let detail = "";
+        try {
+          const data = await response.json();
+          detail = data?.error || data?.message || "";
+        } catch {}
+        throw new Error(detail || `Error HTTP ${response.status}`);
+      }
 
       toast({
         title: "¡Mensaje enviado!",
