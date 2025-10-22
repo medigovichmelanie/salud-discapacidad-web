@@ -29,7 +29,7 @@ const handler = async (req: Request): Promise<Response> => {
     const emailResponse = await resend.emails.send({
       from: "Estudio Jurídico <info@discapacidadmdq.com.ar>",
       to: ["drabenvenuti@yahoo.com.ar"],
-      reply_to: email,
+      replyTo: email,
       subject: `Nueva consulta: ${claimType}`,
       html: `
         <h2>Nueva consulta recibida</h2>
