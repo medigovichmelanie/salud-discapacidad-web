@@ -5,8 +5,7 @@ const resend = new Resend(Deno.env.get("RESEND_API_KEY"));
 
 const corsHeaders = {
   "Access-Control-Allow-Origin": "*",
-  "Access-Control-Allow-Headers":
-    "authorization, x-client-info, apikey, content-type",
+  "Access-Control-Allow-Headers": "authorization, x-client-info, apikey, content-type",
 };
 
 interface ContactEmailRequest {
@@ -29,7 +28,7 @@ const handler = async (req: Request): Promise<Response> => {
 
     const emailResponse = await resend.emails.send({
       from: "Estudio Juridico <onboarding@resend.dev>",
-      to: ["drgianuzzi@gmail.com"],
+      to: ["drabenvenuti@yahoo.com.ar"],
       replyTo: email,
       subject: `Nueva consulta: ${claimType}`,
       html: `
@@ -39,7 +38,7 @@ const handler = async (req: Request): Promise<Response> => {
         <p><strong>Teléfono:</strong> ${phone}</p>
         <p><strong>Objeto a reclamar:</strong> ${claimType}</p>
         <h3>Caso:</h3>
-        <p>${message.replace(/\n/g, '<br>')}</p>
+        <p>${message.replace(/\n/g, "<br>")}</p>
       `,
     });
 
@@ -54,13 +53,10 @@ const handler = async (req: Request): Promise<Response> => {
     });
   } catch (error: any) {
     console.error("Error in send-contact-email function:", error);
-    return new Response(
-      JSON.stringify({ error: error.message }),
-      {
-        status: 500,
-        headers: { "Content-Type": "application/json", ...corsHeaders },
-      }
-    );
+    return new Response(JSON.stringify({ error: error.message }), {
+      status: 500,
+      headers: { "Content-Type": "application/json", ...corsHeaders },
+    });
   }
 };
 
