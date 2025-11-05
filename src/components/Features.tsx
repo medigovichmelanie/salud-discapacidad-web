@@ -14,10 +14,10 @@ const Features = () => {
       <div className="container mx-auto px-4">
         <div className="text-center max-w-3xl mx-auto mb-16">
           <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-4">
-            Nosotros
+            Abogados Especialistas en Derecho a la Salud en Mar del Plata
           </h2>
           <p className="text-lg text-muted-foreground">
-            Abogados especializados en derecho a la salud y en la protección de los derechos de las personas con discapacidad en Mar del Plata.
+            Estudio jurídico especializado en amparos de salud, derecho de la discapacidad, pensiones por invalidez y cobertura de obras sociales en Mar del Plata. Defendemos tus derechos ante PAMI, prepagas y obras sociales.
           </p>
         </div>
 
@@ -25,10 +25,10 @@ const Features = () => {
         <div className="max-w-4xl mx-auto mb-16">
           <div className="bg-card border border-border rounded-2xl p-8 shadow-[var(--shadow-card)]">
             <p className="text-foreground text-lg leading-relaxed mb-4">
-              Contamos con <strong className="font-bold text-primary">25 años de trayectoria</strong> que avalan nuestro profesionalismo y dedicación. Actuamos cuando se vulneran derechos de salud para asegurar coberturas de tratamientos, medicación, internaciones y prestaciones vinculadas a la discapacidad.
+              Contamos con <strong className="font-bold text-primary">más de 25 años de experiencia</strong> en amparos de salud y derecho a la discapacidad que avalan nuestro profesionalismo. Actuamos cuando obras sociales, prepagas o PAMI vulneran derechos de salud para asegurar coberturas de tratamientos médicos, medicación, internaciones, prótesis, certificados de discapacidad y pensiones por invalidez.
             </p>
             <p className="text-muted-foreground text-lg leading-relaxed italic border-l-4 border-primary pl-4">
-              Conocemos los criterios de los tribunales y el proceso del amparo, lo que nos permite diseñar estrategias ajustadas a cada caso y obtener resultados en tiempo útil.
+              Conocemos los criterios jurisprudenciales de los tribunales de Mar del Plata y el proceso del amparo de salud, lo que nos permite diseñar estrategias legales ajustadas a cada caso y obtener medidas cautelares urgentes en tiempo útil.
             </p>
           </div>
         </div>
@@ -46,15 +46,15 @@ const Features = () => {
             <ul className="space-y-4">
               <li className="flex items-start gap-3">
                 <div className="w-2 h-2 rounded-full bg-primary mt-2 flex-shrink-0"></div>
-                <span className="text-foreground leading-relaxed">Asesoramiento claro, práctico y orientado a resultados.</span>
+                <span className="text-foreground leading-relaxed">Asesoramiento jurídico claro, práctico y orientado a resultados concretos en amparos de salud.</span>
               </li>
               <li className="flex items-start gap-3">
                 <div className="w-2 h-2 rounded-full bg-primary mt-2 flex-shrink-0"></div>
-                <span className="text-foreground leading-relaxed">Estrategias según documentación y contexto de cada afiliado.</span>
+                <span className="text-foreground leading-relaxed">Estrategias legales personalizadas según documentación médica y contexto de cada afiliado.</span>
               </li>
               <li className="flex items-start gap-3">
                 <div className="w-2 h-2 rounded-full bg-primary mt-2 flex-shrink-0"></div>
-                <span className="text-foreground leading-relaxed">Amplia experiencia en amparos de salud y medidas cautelares.</span>
+                <span className="text-foreground leading-relaxed">Amplia experiencia en amparos de salud urgentes y medidas cautelares ante obras sociales y prepagas.</span>
               </li>
             </ul>
           </div>
@@ -70,15 +70,15 @@ const Features = () => {
             <ul className="space-y-4 mb-8">
               <li className="flex items-start gap-3">
                 <div className="w-2 h-2 rounded-full bg-primary mt-2 flex-shrink-0"></div>
-                <span className="text-foreground leading-relaxed">Especialistas en derecho a la salud.</span>
+                <span className="text-foreground leading-relaxed">Abogados especialistas en derecho a la salud y discapacidad con amplia trayectoria.</span>
               </li>
               <li className="flex items-start gap-3">
                 <div className="w-2 h-2 rounded-full bg-primary mt-2 flex-shrink-0"></div>
-                <span className="text-foreground leading-relaxed">25 años de experiencia.</span>
+                <span className="text-foreground leading-relaxed">Más de 25 años de experiencia en amparos de salud exitosos en Mar del Plata.</span>
               </li>
               <li className="flex items-start gap-3">
                 <div className="w-2 h-2 rounded-full bg-primary mt-2 flex-shrink-0"></div>
-                <span className="text-foreground leading-relaxed">Enfoque local en Mar del Plata.</span>
+                <span className="text-foreground leading-relaxed">Conocimiento profundo de tribunales locales y jurisprudencia en Mar del Plata.</span>
               </li>
             </ul>
             

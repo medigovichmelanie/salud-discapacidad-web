@@ -91,9 +91,9 @@ const Contact = () => {
 
       <div className="container px-4 mx-auto max-w-5xl relative z-10">
         <div className="mb-16 text-center max-w-3xl mx-auto">
-          <h2 className="text-4xl md:text-5xl font-bold mb-4 text-foreground">Tu caso</h2>
+          <h2 className="text-4xl md:text-5xl font-bold mb-4 text-foreground">Consultá tu Caso Legal</h2>
           <p className="text-lg text-muted-foreground">
-            Completá el formulario y nos pondremos en contacto a la brevedad.
+            Completá el formulario de contacto con tu consulta sobre obra social, prepaga, PAMI o discapacidad. Te responderemos en 24 horas. Primera consulta gratuita.
           </p>
         </div>
 
