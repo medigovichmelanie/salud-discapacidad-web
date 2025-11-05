@@ -13,9 +13,9 @@ const CTA = () => {
 
       <div className="container mx-auto px-4 relative z-10">
         <div className="max-w-3xl mx-auto text-center">
-          <h2 className="text-4xl md:text-5xl font-bold text-primary-foreground mb-6">Defendemos tus Derechos de Salud</h2>
+          <h2 className="text-4xl md:text-5xl font-bold text-primary-foreground mb-6">Comienza tu Consulta Hoy</h2>
           <p className="text-xl text-primary-foreground/90 mb-8 leading-relaxed">
-            No dejes que la obra social o prepaga vulnere tus derechos. Iniciamos tu amparo de salud con urgencia. Evaluamos tu caso de cobertura médica y te ofrecemos estrategias legales efectivas en Mar del Plata.
+            No dejes que el tiempo juegue en tu contra. Evaluamos tu caso y te ofrecemos las mejores opciones legales.
           </p>
 
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -45,7 +45,7 @@ const CTA = () => {
           </div>
 
           <p className="mt-8 text-primary-foreground/80 text-sm">
-            Consulta legal gratuita • Sin compromiso • Respuesta en menos de 24 horas • Medidas cautelares urgentes
+            Primera consulta completamente gratuita • Sin compromiso • Respuesta en 24h
           </p>
         </div>
       </div>

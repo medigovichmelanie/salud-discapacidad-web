@@ -17,7 +17,8 @@ const Footer = () => {
               </div>
             </div>
             <p className="text-muted-foreground text-sm leading-relaxed max-w-md">
-              Estudio jurídico especializado en derecho a la salud, amparos de salud, derecho de la discapacidad y pensiones. Más de 25 años defendiendo derechos de salud ante obras sociales, prepagas y PAMI en Mar del Plata con profesionalismo y dedicación.
+              Despacho especializado en derecho a la salud y de la discapacidad. Más de 25 años defendiendo los derechos
+              de nuestros clientes con profesionalismo y dedicación.
             </p>
           </div>
 

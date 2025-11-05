@@ -14,7 +14,7 @@ const Hero = () => {
       <div className="absolute inset-0 z-0">
         <img
           src={heroImage}
-          alt="Abogados especialistas en derecho a la salud y discapacidad en Mar del Plata - Amparos de salud y cobertura médica"
+          alt="Asesoría legal profesional en salud y discapacidad"
           className="w-full h-full object-cover"
         />
         <div className="absolute inset-0 bg-gradient-to-r from-background/95 via-background/85 to-background/50" />
@@ -28,16 +28,17 @@ const Hero = () => {
           </div>
 
           <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold mb-6 text-foreground leading-tight">
-            Abogados en
+            Especialistas en
             <span className="bg-gradient-to-r from-primary via-secondary to-primary bg-clip-text text-transparent">
               {" "}
-              Discapacidad y Derecho a la Salud{" "}
+              Derecho a la Salud{" "}
             </span>
             Mar del Plata
           </h1>
 
           <p className="text-xl text-muted-foreground mb-8 leading-relaxed">
-            Especialistas en amparos de salud, cobertura médica y pensiones por discapacidad. 25 años defendiendo tus derechos ante obras sociales, prepagas y PAMI en Mar del Plata. Obtenemos resultados concretos en tratamientos denegados, medicación y certificados de discapacidad.
+            Defendemos tu derecho a la salud y a una vida digna. Más de 25 años acompañando a personas en Mar del Plata
+            para garantizar coberturas médicas, acceso a tratamientos y prestaciones por discapacidad.
           </p>
 
           <div className="flex flex-col sm:flex-row gap-4">

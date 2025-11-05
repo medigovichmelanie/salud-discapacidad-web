@@ -5,22 +5,22 @@ const HowToAct = () => {
   const steps = [
     {
       number: "1",
-      title: "Consulta Legal Gratuita",
-      description: "Brindamos asesoramiento jurídico especializado según tu caso, explicando cómo reclamar formalmente ante la obra social, prepaga o PAMI, y qué documentación médica es necesaria para el amparo.",
+      title: "Entrevista inicial",
+      description: "Brindamos asesoramiento jurídico y práctico según tu caso, explicando cómo reclamar formalmente ante la obra social y qué documentación es necesaria.",
       icon: FileText,
       color: "from-blue-500 to-cyan-500"
     },
     {
       number: "2",
-      title: "Reclamo Administrativo Formal",
-      description: "Presentamos el reclamo administrativo formal ante la obra social o prepaga. Si hay negativa, demora o arbitrariedad, se habilita la vía judicial para exigir el cumplimiento de tus derechos de salud.",
+      title: "Vía administrativa",
+      description: "Se presenta el reclamo formal. Si hay negativa o arbitrariedad, se habilita la instancia judicial para exigir el cumplimiento de tus derechos.",
       icon: Building2,
       color: "from-amber-500 to-orange-500"
     },
     {
       number: "3",
-      title: "Amparo de Salud Urgente",
-      description: "Interponemos el amparo judicial para tutelar tu derecho a la salud constitucionalmente protegido. En casos urgentes, solicitamos medida cautelar con resolución en 24-48hs para garantizar cobertura inmediata.",
+      title: "Acción de amparo",
+      description: "Se interpone el amparo para tutelar tu derecho a la salud y, en casos urgentes, se solicita una medida cautelar con resolución rápida.",
       icon: Shield,
       color: "from-primary to-secondary"
     }
@@ -31,10 +31,10 @@ const HowToAct = () => {
       <div className="container px-4 mx-auto max-w-7xl">
         <div className="mb-16 text-center max-w-3xl mx-auto">
           <h2 className="text-4xl md:text-5xl font-bold mb-4 text-foreground">
-            Cómo Reclamar ante Obras Sociales y Prepagas
+            Cómo actuar
           </h2>
           <p className="text-lg text-muted-foreground">
-            Procedimiento legal para reclamar ante negativas de cobertura médica de obras sociales, prepagas o PAMI. Cómo funciona el amparo de salud y las medidas cautelares urgentes.
+            Pasos para reclamar ante una negativa o silencio de la obra social y cómo funciona el recurso de amparo en salud.
           </p>
         </div>
 
@@ -93,14 +93,14 @@ const HowToAct = () => {
                   <Shield className="h-7 w-7 sm:h-8 sm:w-8 text-primary-foreground" />
                 </div>
                 <h3 className="text-2xl sm:text-3xl md:text-4xl font-bold text-primary sm:mt-2">
-                  ¿Qué es el Amparo de Salud y la Medida Cautelar?
+                  ¿Qué es el recurso de amparo en salud?
                 </h3>
               </div>
               
               <div className="space-y-4 sm:space-y-6 sm:ml-20">
                 <div className="bg-card/80 backdrop-blur-sm border border-border rounded-xl p-4 sm:p-6 shadow-sm">
                   <p className="text-foreground text-base sm:text-lg leading-relaxed">
-                    El amparo de salud es un recurso judicial constitucional que se utiliza cuando obras sociales, prepagas o PAMI niegan o demoran coberturas de tratamientos médicos, medicación, prótesis, internaciones o cirugías. Es una vía judicial <strong className="text-primary font-semibold">rápida y efectiva</strong>: ante urgencia médica puede dictarse una medida cautelar en 24-48 horas ordenando cobertura inmediata; luego el proceso de amparo continúa hasta la sentencia definitiva.
+                    El recurso de amparo se utiliza cuando se afecta o niega el ejercicio de un derecho, por ejemplo la cobertura de un tratamiento, medicación, internación o traslado. Es una vía judicial <strong className="text-primary font-semibold">rápida y efectiva</strong>: ante urgencia puede dictarse una medida cautelar en pocas horas; luego el proceso continúa hasta la resolución definitiva.
                   </p>
                 </div>
                 
