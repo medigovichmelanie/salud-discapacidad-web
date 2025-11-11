@@ -82,20 +82,6 @@ const services = [
       "Fertilidad: acceso a técnicas y fármacos según normativa.",
     ],
   },
-  {
-    icon: Globe,
-    title: "Extranjería e Inmigración a España",
-    shortDescription:
-      "Estamos especializados en extranjería, nacionalidad, derecho laboral, seguridad social y movilidad internacional, y cuenta con la experiencia necesaria para guiarte en cada etapa del proceso.",
-    fullDescription: [
-      "Nuestros servicios abarcan:",
-      "Visados y permisos de residencia: Obtención, renovación y modificaciones. Residencia y trabajo por cuenta ajena, cuenta propia y supuestos especiales.",
-      "Arraigo y regularizaciones: Laboral, social y familiar.",
-      "Nacionalidad española: Solicitud, preparación de documentación y presentación de recursos.",
-      "Reagrupación familiar: Acompañamiento en la reunificación con cónyuge, hijos u otros familiares.",
-      "Estancia por estudios y movilidad internacional: Autorizaciones para estudiantes y prácticas. Tarjeta Azul-UE y traslados intraempresariales.",
-    ],
-  },
 ];
 
 const ServiceItem = ({ service, value }: { service: (typeof services)[0]; value: string }) => {
