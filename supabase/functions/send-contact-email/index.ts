@@ -27,7 +27,7 @@ const handler = async (req: Request): Promise<Response> => {
     console.log("Processing contact form submission from:", email);
 
     const emailResponse = await resend.emails.send({
-      from: "Estudio Jurídico <info@discapacidadmdq.com.ar>",
+      from: "Estudio Jurídico <info@discapacidadmdp.com.ar>",
       to: ["drabenvenuti@yahoo.com.ar"],
       replyTo: email,
       subject: `Nueva consulta: ${claimType}`,
