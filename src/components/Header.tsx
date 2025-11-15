@@ -16,7 +16,7 @@ const Header = () => {
               <Scale className="h-6 w-6 text-primary-foreground" />
             </div>
             <div>
-              <h1 className="text-xl font-bold text-foreground">Discapacidad MDQ</h1>
+              <h1 className="text-xl font-bold text-foreground">Discapacidad MDP</h1>
               <p className="text-xs text-muted-foreground">Abogados Especialistas</p>
             </div>
           </div>

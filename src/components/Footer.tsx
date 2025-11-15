@@ -12,7 +12,7 @@ const Footer = () => {
                 <Scale className="h-6 w-6 text-primary-foreground" />
               </div>
               <div>
-                <h3 className="text-xl font-bold text-foreground">Discapacidad MDQ</h3>
+                <h3 className="text-xl font-bold text-foreground">Discapacidad MDP</h3>
                 <p className="text-xs text-muted-foreground">Abogados Especialistas</p>
               </div>
             </div>
@@ -70,7 +70,7 @@ const Footer = () => {
         </div>
 
         <div className="border-t border-border pt-6 text-center text-sm text-muted-foreground">
-          <p>© {new Date().getFullYear()} Discapacidad MDQ. Todos los derechos reservados.</p>
+          <p>© {new Date().getFullYear()} Discapacidad MDP. Todos los derechos reservados.</p>
         </div>
       </div>
     </footer>
