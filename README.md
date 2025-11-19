@@ -1,4 +1,3 @@
-```markdown
 # ⚖️ Abogados Salud MDP — Sitio Web Informativo
 
 ## 🌐 Demo online  
@@ -47,17 +46,23 @@ Los cambios se sincronizan automáticamente con el repositorio.
 
 ### 2. Editar localmente desde tu IDE
 
-```sh
-# 1. Clonar el repositorio
+#### 1. Clonar el repositorio  
+```
 git clone <URL_DEL_REPOSITORIO>
+```
 
-# 2. Entrar al proyecto
+#### 2. Entrar al proyecto  
+```
 cd nombre-del-proyecto
+```
 
-# 3. Instalar dependencias
+#### 3. Instalar dependencias  
+```
 npm install
+```
 
-# 4. Ejecutar el servidor de desarrollo
+#### 4. Ejecutar el servidor de desarrollo  
+```
 npm run dev
 ```
 
@@ -104,4 +109,3 @@ El formulario usa **Resend** para enviar mensajes al correo del cliente.
 Proyecto desarrollado como parte de mis prácticas y trabajos personales mientras continúo formándome y ampliando mi experiencia en desarrollo web.
 
 ---
-```
