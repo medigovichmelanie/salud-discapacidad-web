@@ -51,7 +51,7 @@ const Hero = () => {
             {/* Botón de WhatsApp */}
             <Button variant="hero-outline" size="lg" className="text-base" asChild>
               <a
-                href="https://wa.me/5492234421528?text=Hola! Quisiera más información."
+                href="https://wa.me/5492234001244?text=Hola! Quisiera más información."
                 target="_blank"
                 rel="noopener noreferrer"
               >

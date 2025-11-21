@@ -34,7 +34,7 @@ const CTA = () => {
               asChild
             >
               <a
-                href="https://api.whatsapp.com/send?phone=5492234421528&text=Hola! Quisiera más información."
+                href="https://api.whatsapp.com/send?phone=5492234001244&text=Hola! Quisiera más información."
                 target="_blank"
                 rel="noopener noreferrer"
               >
